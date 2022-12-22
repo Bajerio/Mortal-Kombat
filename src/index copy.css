@@ -1,0 +1,176 @@
+:root{}
+
+html{
+    background:#223;
+    color:white;
+}
+
+
+h1{
+
+    display:flex;
+    justify-content:center;
+    
+}
+
+div.contadores{
+
+}
+
+
+div.juego{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* background:red; */
+    /* height:300px; */
+    /* margin:150px; */
+
+    
+    
+    & div.capa1{
+        
+        display:grid;
+        grid-template-rows:repeat(2,300px);
+        grid-template-columns:repeat(3,300px);
+        background-image:linear-gradient(to top,yellow,blue);
+        padding:130px;
+        gap:10px;
+
+
+        & span#cuadrado1,& span#cuadrado2{
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#8321dd;
+            height:226px;
+            width:223px;
+            font-size:30px;
+            text-align:center;
+            gap:10px;
+
+            & div[class=semicirculo]{
+
+                width:50px;
+                height:100px;
+                background:#5cb85c;
+                border-radius:100px 0 0 100px;
+
+            }
+            & div[class=semicirculo_invertido]{
+
+                width:50px;
+                height:100px;
+                background:#5cb85c;
+                border-radius:0 100px 100px 0;
+
+            }
+            
+            & div[class=semi1]{
+
+                width:25px;
+                height:50px;
+                background:#8321dd;
+                border-radius:100px 0 0 100px;
+                margin:25px;
+
+            }
+            & div[class=semi2]{
+
+                width:25px;
+                height:50px;
+                background:#8321dd;
+                border-radius:0 100px 100px 0;
+                margin:25px 25px 25px 0;
+
+            }
+                /* & div.semicirculo1{
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:100px 0 0 100px;
+
+                    & div.semicirculo1_1{
+
+                        width:25px;
+                        height:50px;
+                        background:#8321dd;
+                        border-radius:100px 0 0 100px;
+                        margin:25px;
+                        
+                    }
+                }
+                & div.semicirculo2{
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:0 100px 100px 0;
+
+                    & div.semicirculo2_1{
+
+                        width:25px;
+                        height:50px;
+                        background:#8321dd;
+                        border-radius:0 100px 100px 0;
+                        margin:25px 25px 25px 0;
+                        
+                    }
+                }
+                & div.semicirculo3{
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:100px 0 0 100px;
+
+                    & div.semicirculo3_1{
+
+                        width:25px;
+                        height:50px;
+                        background:#8321dd;
+                        border-radius:100px 0 0 100px;
+                        margin:25px;
+                        
+                    }
+                }
+                & div.semicirculo4{
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:0 100px 100px 0;
+
+                    & div.semicirculo4_1{
+
+                        width:25px;
+                        height:50px;
+                        background:#8321dd;
+                        border-radius:0 100px 100px 0;
+                        margin:25px 25px 25px 0;
+                        
+                    }
+                } */
+
+
+        }
+
+
+
+        & input#boton {
+
+            background:red;
+            border-radius:50%;
+            cursor:pointer;
+            height:100px;
+            width:100px;
+            margin:70px;
+            box-shadow: 10px 10px 10px;
+
+        }
+        & input#boton:hover{
+            background:darkred;
+        }
+
+    }
+    
+}

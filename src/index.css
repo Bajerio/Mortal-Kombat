@@ -1,0 +1,375 @@
+/* downloadable font: hhea: Failed to parse table (font-family: "MK5 Style" style:normal weight:400 stretch:100 src index:1) source: http://localhost:5173/fonts/mk5style.ttf */
+
+
+/* Esta letra no la carga */
+@font-face{ 
+    font-family:"MK5";
+    weight:100;
+    src: 
+    url("fonts/mk5style.ttf") format("truetype");
+    font-display:swap;
+}
+
+/* @font-face{
+    font-family:"MK5-1";
+    src: 
+    url("fonts/mk1.ttf") format("truetype");
+    font-display:swap;
+} */
+@font-face{
+    font-family:"MK4";
+    src: 
+    url("fonts/MK4.TTF") format("truetype");
+    font-display:swap;
+}
+
+:root{
+    --fuenteMK4: "MK4";
+    --porcentaje-barra:0%;
+}
+
+html{
+    background:#223;
+    color:white;
+}
+
+
+h1{
+
+    display:flex;
+    justify-content:center;
+    
+}
+
+
+/* h1 { font-family: Lato; font-weight: 100 }
+h3{font-family:var(--fuenteMK),sans-serif;} */
+h3{
+    font-family:var(--fuenteMK4),sans-serif;
+    font-size:50px;
+}
+input{
+    font-family:var(--fuenteMK4),sans-serif;
+}
+p{
+font-size:10px;
+}
+.modal_scorpion{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    gap: 0.4rem;
+    width: 750px;
+    padding: 5.3rem;
+    min-height: 750px;
+    background-image: linear-gradient(to top,yellow,red);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 2;
+
+    & img#scorpion_gif{
+
+        width: 700px;
+        min-height: 500px;
+
+    }
+
+  }
+.modal_subzero{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    gap: 0.4rem;
+    width: 750px;
+    padding: 5.3rem;
+    min-height: 750px;
+    background-image: linear-gradient(to top,yellow,red);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 2;
+
+    & img#subzero_gif{
+
+        width: 700px;
+        min-height: 500px;
+
+    }
+
+  }
+
+
+
+
+div.overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+
+
+}
+
+.hidden{
+    display: none;
+}
+
+div.vacio{
+
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    background:#8321dd;
+    font-size:30px;
+    height:200px;
+    text-align:center;
+    gap:10px;
+    margin:30px;
+
+}
+
+input#contador{
+
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    background:yellow;
+    font-size:130px;
+    height:200px;
+    width:200px;
+    text-align:center;
+    gap:10px;
+    margin:30px;
+    color:black;
+
+}
+
+div.jugada{
+
+    background:black;
+    font-size:30px;
+    width:240px;
+    height:260px;
+    margin:30px;
+    text-align:center;
+}
+
+div.juego{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+ 
+
+
+    & div.container{
+
+        display:grid;
+        grid-template-rows:repeat(4,300px);
+        grid-template-columns:repeat(3,300px);
+        background-image:linear-gradient(to top,yellow,blue);
+        padding:130px;
+        gap:10px;
+
+        & div.barra_vida,& div.barra_vida::after{
+
+            position:relative;
+            width:340px;
+            height:100px;
+            background:red;
+            overflow: hidden;
+            /* margin:100px 0 0 30px; */
+        }
+        
+        & div.barra_vida::after{
+            content:"";  /* Es para que se dibuje */
+            position:absolute;
+            background:green;
+            left:-340px;
+            animation:bar_fill 2s ease-in-out forwards; 
+            @at-root {
+            @keyframes bar_fill{
+            
+                
+                /* transform:translateX(var(--porcentaje-barra)); */
+                /* 50%  { transform: translateY(40px); } */
+                100% {
+                    left: 400px;
+                  }
+                }
+            
+        }
+            /*forwards para que termine la barra en el punto donde cierra la animacion*/
+            
+        }
+
+        /* & div.prueba_animacion {
+  
+            & .box {
+              width: 100px;
+              height: 100px;
+              background: red;
+              animation: move 2s ease infinite;
+              
+              @keyframes move {
+                to { transform: rotate(360deg); }
+              }
+            }
+          } */
+        
+        
+        & div.barra1::after{
+            
+            --porcentaje-barra:10%;
+        
+        }
+
+        & div.barra2::after{
+         
+            --porcentaje-barra:20%;
+                
+        }
+        
+        /* Añadimos la animacion y cambiará el porcentaje de la barra */
+
+
+
+
+        & div.titulo{
+
+            display:flex; 
+            align-items:center;
+            justify-content:center;
+            padding:30px;
+            background:yellow;
+            font-size:130px;
+            height:200px;
+            width:200px;
+            text-align:center;
+            gap:10px;
+            margin:30px;
+            color:black;
+
+        }
+
+
+        & div.columna1,& div.columna3{
+         
+          
+
+            & span#cuadrado1,& span#cuadrado2{ /* 3 Filas 1 columna */
+                
+                display:flex; 
+                align-items:center;
+                justify-content:center;
+                padding:30px;
+                background:#8321dd;
+                font-size:30px;
+                height:200px;
+                text-align:center;
+                gap:10px;
+                margin:30px;
+
+                & div.semicirculo{
+
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:100px 0 0 100px;
+
+                }
+                & div.semicirculo_invertido{
+
+                    width:50px;
+                    height:100px;
+                    background:#5cb85c;
+                    border-radius:0 100px 100px 0;
+
+                }
+                
+                & div.semi1{
+
+                    width:25px;
+                    height:50px;
+                    background:#8321dd;
+                    border-radius:100px 0 0 100px;
+                    margin:25px;
+
+                }
+                & div.semi2{
+
+                    width:25px;
+                    height:50px;
+                    background:#8321dd;
+                    border-radius:0 100px 100px 0;
+                    margin:25px 25px 25px 0;
+
+                }
+            }
+
+            & img#player1,& img#player2{
+                width:240px;
+                height:260px;
+                margin:30px;
+            }
+            
+          
+        }
+    }
+
+
+        & div.columna2{
+
+            
+
+            & input#boton {
+
+                border-radius:50%;
+                cursor:pointer;
+                height:100px;
+                width:100px;
+                margin:50px;
+                padding:110px;
+                box-shadow: 10px 10px 10px;
+                background-image:url("./components/MK-logo.png");
+                
+            }
+            & input#boton:active{
+            
+                transform:scale(0.98);
+            }
+
+            & input#reiniciar{
+
+                display:flex; 
+                align-items:center;
+                justify-content:center;
+                padding:30px;
+                background:grey;
+                font-size:30px;
+                height:200px;
+                width:200px;
+                text-align:center;
+                gap:10px;
+                margin:50px;
+                color:black;
+                cursor:pointer;
+    
+            }
+    }
+}

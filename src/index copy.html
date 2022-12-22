@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+
+  <!-- <h1>PAGINA DE INICIO: PIEDRA, PAPEL Y TIJERAS</h1> -->
+  
+  
+  <div class="juego"> <!-- Flex -->
+
+          <section class="modal hidden">
+            <div class="flex">
+              <input type="button" id="salir" value="X"/>
+            </div>
+            <h3>SCORPIONS WINS!</h3>
+          </section>
+          
+          <div class="overlay hidden"></div>
+
+    <div class="container"> <!-- Grid -->
+    <div class="columna1"> 
+      
+            <span id="cuadrado1"><!-- Flex -->
+              <div class="semicirculo sc_scorpion">
+                <div class="semi1"></div>
+              </div>
+              <div class="semicirculo_invertido si_scorpion">
+                <div class="semi2"></div>
+              </div>
+            </span>
+            
+            <img src="./components/Scorpion.jpg" alt="player1" id="player1">
+            
+            <div class="jugada">
+            <img src="./components/bloody-scissors.png" alt="player1" id="img_player1">
+          </div>
+
+          </div>
+
+          <div class="columna2"> <!-- Hereda el Grid del container -->
+
+            <input id="contador" readonly></input>
+            <input type="button" id="boton">
+            <!-- <div class="jugada">Jugada vacia</div> -->
+
+          </div>
+
+          <div class="columna3">
+
+            <span id="cuadrado2">
+              <div class="semicirculo sc_subzero">
+                <div class="semi1"></div>
+              </div>
+              <div class="semicirculo_invertido si_subzero">
+                <div class="semi2"></div>
+              </div>
+            </span>
+ 
+            <img src="./components/sub_zero.jpg" alt="player2" id="player2">
+            
+            <div class="jugada">
+              <img src="./components/rock.png" alt="player2" id="img_player2">
+            </div>
+  
+          </div>
+          
+        </div>
+</div>
+   <!-- 
+<span id="cuadrado2">
+  <div class="semicirculo">
+    <div class="semi1"></div>
+  </div>
+  <div class="semicirculo_invertido">
+    <div class="semi2"></div>
+  </div>
+</span>
+        
+     <span id="columna2">
+            
+            <input type="button" value="X" id="boton">
+          </span>
+            
+            
+            
+
+        <div class="columna3">
+
+          <span id="cuadrado2">
+            <div class="semicirculo">
+              <div class="semi1"></div>
+            </div>
+            <div class="semicirculo_invertido">
+              <div class="semi2"></div>
+            </div>
+          </span>
+          
+          <div class="vacio"></div>
+
+          <img src="./components/sub_zero.jpg" alt="player2" id="player2">
+
+        </div>
+
+
+          <div class="fila3">
+
+            <span class="cuadrado"></span>
+      
+            <div></div>
+            
+            <span class="cuadrado"></span>
+            
+          </div>
+
+      </div> -->
+
+  <!--
+  <div class="juego">
+    <div class="capa1">
+
+      <div class="item1">   
+        <img src="./components/Scorpion.jpg" alt="player1" id="player1">
+      </div>
+
+        <div class="item2">
+        <input type="button" value="X" id="boton">
+      </div>
+
+        <div class="item3">
+        <img src="./components/sub_zero.jpg" alt="player2" id="player2">
+      </div>
+
+    </div>
+   
+  </div>
+-->
+
+
+</body>
+
+</html>
