@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIEDRA, PAPEL, TIJERAS</title>
+  
+  
+  <script type="module" crossorigin src="/rock_paper_scissors/index-8e0a2b38.js"></script>
+  <link rel="stylesheet" href="/rock_paper_scissors/index-bcf77a32.css">
+</head>
+
+<body>
+
+  <!-- <h1>PAGINA DE INICIO: PIEDRA, PAPEL Y TIJERAS</h1> -->
+
+
+  <div class="juego"> <!-- Flex -->
+
+    <section class="modal_scorpion hidden">
+      <h3>SCORPIONS WINS!</h3>
+      <img src="/rock_paper_scissors/scorpion-subzero-mortal-kombat-f3cc4a8b.gif" id="scorpion_gif" alt="scorpion_VS_subzero">
+    </section>
+
+    <section class="modal_subzero hidden">
+      <h3>SUBZERO WINS!</h3>
+      <img src="/rock_paper_scissors/subzero-scorpion-mortal-kombat-d86601c8.gif" id="subzero_gif" alt="scorpion_VS_subzero">
+    </section>
+    <div class="overlay hidden"></div>
+
+
+
+
+
+    <div class="container"> <!-- Grid -->
+      <div class="barra_vida barra1"></div>
+      <div class="titulo"><h3>ROUND</h3></div>
+      <!-- <div></div> -->
+      <div class="barra_vida barra2"></div>
+
+      <!-- <div class="prueba_animacion">
+        <div class="box"></div>
+      </div> -->
+
+      <div class="columna1">
+       
+        <span id="cuadrado1"><!-- Flex -->
+          <div class="semicirculo sc_scorpion">
+            <div class="semi1"></div>
+          </div>
+          <div class="semicirculo_invertido si_scorpion">
+            <div class="semi2"></div>
+          </div>
+        </span>
+
+        <img src="/rock_paper_scissors/Scorpion-3c47acfe.jpg" alt="player1" id="player1">
+
+        <div class="jugada">
+          <img src="/rock_paper_scissors/bloody-scissors-b11a336f.png" alt="player1" id="img_player1">
+        </div>
+
+      </div>
+     <div class="columna2"> <!-- Hereda el Grid del container -->
+        
+        <input id="contador" placeholder="0" ></input>
+        <input type="button" id="boton">
+        <input id="reiniciar" type="button" value="Reiniciar"></input>
+
+      </div>
+
+      <div class="columna3">
+
+        <span id="cuadrado2">
+          <div class="semicirculo sc_subzero">
+            <div class="semi1"></div>
+          </div>
+          <div class="semicirculo_invertido si_subzero">
+            <div class="semi2"></div>
+          </div>
+        </span>
+
+        <img src="/rock_paper_scissors/sub_zero-6127af81.jpg" alt="player2" id="player2">
+
+        <div class="jugada">
+          <img src="/rock_paper_scissors/rock-c533139c.png" alt="player2" id="img_player2">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
